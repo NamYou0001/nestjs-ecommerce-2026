@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-
+import { CreateProductDto } from './dto/create-product.dto.js';
 @Injectable()
 export class ProductService {
 
@@ -35,5 +35,10 @@ export class ProductService {
             price: 200
         }
     ]
+    }
+
+
+    create (dto: CreateProductDto) {
+        return dto ;
     }
 }
